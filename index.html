@@ -40,14 +40,54 @@
         <div class="flex-container-row">
           <div class="button">0</div>
           <div class="button">00</div>
-          <div class="button">,</div>
+          <div class="button">.</div>
           <div class="button equal">=</div>
         </div>
+      </div>
+      <div class="history card">
+        <h2>Riwayat Perhitungan</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Angka Pertama</th>
+              <th>Operator</th>
+              <th>Angka Kedua</th>
+              <th>Hasil</th>
+            </tr>
+          </thead>
+          <tbody id="historyList"></tbody>
+        </table>
       </div>
       <div class="footer">
         <footer>2021 | <a href="https://ryanmoehs.github.io">ryanmmoehs</a></footer>
       </div>
     </div>
     <script src="assets/calc.js"></script>
+    <!-- localStorage -->
+    <script src="assets/storage.js"></script>
+    <!-- firebase deploy -->
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyBrD1ToF62G4SO2c8SCfAVakBoYvOU_n7M",
+        authDomain: "ryanmoehs.firebaseapp.com",
+        projectId: "ryanmoehs",
+        storageBucket: "ryanmoehs.appspot.com",
+        messagingSenderId: "399803791039",
+        appId: "1:399803791039:web:9f04cfa43cd0963fe4380a",
+        measurementId: "G-9JJG0CNYX2",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
   </body>
 </html>

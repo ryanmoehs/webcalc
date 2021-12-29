@@ -26,9 +26,9 @@ body {
   font-size: 1.5em;
   text-align: center;
   padding: 20px;
-  margin: 0.3em 0.5em;
-  border: 1px solid black;
-  border-radius: 5px;
+  /* margin: 0.3em 0.5em; */
+  border: 0.5px solid black;
+  /* border-radius: 5px; */
   background: #f6d55c;
   cursor: pointer;
 }
@@ -60,6 +60,35 @@ body {
   margin-top: 20px;
 }
 
+.history {
+  color: #f6d55c;
+  width: 80%;
+  margin: 30px auto 0 auto;
+  overflow: scroll;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px none;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 16px;
+}
+
+th {
+  background-color: #173f5f;
+  color: #f6d55c;
+}
+
+tr:nth-child(even) {
+  background-color: #102f47;
+}
+
 .footer {
   margin: 0 auto;
   margin-top: 10px;
@@ -75,5 +104,19 @@ body {
 @media screen and (max-width: 513px) {
   .button {
     padding: 10px;
+  }
+
+  .history {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .button {
+    padding: 10px;
+  }
+
+  .history {
+    width: 100%;
   }
 }
